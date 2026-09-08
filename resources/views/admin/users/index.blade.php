@@ -77,7 +77,60 @@
             <span class="text-xs text-brandGray font-medium">Menampilkan {{ $users->count() }} dari {{ $users->total() }} akun</span>
         </div>
 
-        <div class="overflow-x-auto">
+        <!-- Mobile Card List (visible on small screens) -->
+        <div class="block md:hidden divide-y divide-brandLight-200">
+            @forelse($users as $user)
+                <div class="p-4 space-y-3">
+                    <div class="flex items-center justify-between gap-2">
+                        <div class="flex items-center gap-2.5">
+                            <div class="w-8 h-8 rounded-full bg-navy/10 text-navy font-black flex items-center justify-center text-xs shrink-0">
+                                {{ strtoupper(substr($user->name, 0, 2)) }}
+                            </div>
+                            <div>
+                                <span class="font-bold text-brandDark text-sm block">{{ $user->name }}</span>
+                                <span class="text-xs text-brandGray">{{ $user->email }}</span>
+                            </div>
+                        </div>
+
+                        @if($user->hasRole('super_admin'))
+                            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#FBA239]/10 text-brandOrange-700 border border-[#FBA239]/30 shrink-0">
+                                Super Admin
+                            </span>
+                        @else
+                            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-sky-50 text-sky-700 border border-sky-200 shrink-0">
+                                Admin Petugas
+                            </span>
+                        @endif
+                    </div>
+
+                    <div class="flex items-center justify-between pt-2 border-t border-brandLight-100 text-xs">
+                        <span class="text-brandGray">Dibuat: {{ $user->created_at ? $user->created_at->translatedFormat('d M Y') : '-' }}</span>
+                        
+                        <div class="flex items-center gap-2">
+                            <a href="{{ route('admin.users.edit', $user) }}" class="btn-secondary py-1 px-2.5 text-xs font-semibold">
+                                Edit
+                            </a>
+                            @if(auth()->id() !== $user->id)
+                                <form method="POST" action="{{ route('admin.users.destroy', $user) }}" onsubmit="return confirm('Apakah Anda yakin ingin menghapus akun {{ $user->name }}?');" class="inline">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="px-2.5 py-1 rounded-lg text-xs font-semibold text-brandRed hover:bg-brandRed/10 border border-brandRed/30">
+                                        Hapus
+                                    </button>
+                                </form>
+                            @endif
+                        </div>
+                    </div>
+                </div>
+            @empty
+                <div class="p-8 text-center text-brandGray text-xs">
+                    Belum ada akun pengguna yang terdaftar.
+                </div>
+            @endforelse
+        </div>
+
+        <!-- Desktop Table View (visible on medium screens and up) -->
+        <div class="hidden md:block overflow-x-auto">
             <table class="w-full text-left text-sm">
                 <thead class="bg-navy/5 text-navy font-bold text-xs uppercase tracking-wider border-b border-brandLight-200">
                     <tr>

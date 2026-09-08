@@ -26,12 +26,12 @@
                 
                 <!-- Main Report Card -->
                 <div class="card-glass p-6 sm:p-8 border border-brandLight-200 shadow-sm space-y-6">
-                    <div class="flex items-start justify-between border-b border-brandLight-200 pb-4">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-brandLight-200 pb-4 gap-2">
                         <div>
                             <span class="text-xs text-brandGray font-bold uppercase tracking-wider block">Kode Pelacakan</span>
-                            <span class="font-mono text-2xl font-extrabold text-navy">{{ $report->tracking_code }}</span>
+                            <span class="font-mono text-xl sm:text-2xl font-extrabold text-navy">{{ $report->tracking_code }}</span>
                         </div>
-                        <div class="text-right">
+                        <div class="sm:text-right">
                             <span class="text-xs text-brandGray font-bold uppercase tracking-wider block">Waktu Pengiriman</span>
                             <span class="text-xs font-semibold text-brandDark">{{ $report->created_at->translatedFormat('d F Y, H:i') }} WIB</span>
                         </div>

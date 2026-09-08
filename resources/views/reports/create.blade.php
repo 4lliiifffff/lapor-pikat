@@ -25,7 +25,7 @@
             <svg class="w-4 h-4 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                 <span>Alur Penanganan Laporan Pengaduan</span>
             </h3>
-            <div class="grid grid-cols-1 sm:grid-cols-5 gap-2 text-xs">
+            <div class="grid grid-cols-1 min-[480px]:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 text-xs">
                 <!-- Step 1 -->
                 <div class="p-2.5 rounded-xl bg-brandOrange/10 border border-brandOrange/30">
                     <span class="font-bold text-brandOrange-700 block mb-1 flex items-center gap-1">

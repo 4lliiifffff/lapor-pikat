@@ -75,7 +75,7 @@
                 @else
                     <div class="p-5 rounded-2xl bg-white border border-brandLight-200">
                         <span class="text-xs font-bold uppercase tracking-wider text-navy block mb-4">Progres Penanganan Kasus (5 Tahap)</span>
-                        <div class="grid grid-cols-1 sm:grid-cols-5 gap-2">
+                        <div class="grid grid-cols-1 min-[480px]:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5">
                             <!-- Step 1: Validasi -->
                             @php
                                 $s1Done = in_array($report->status, ['reviewing', 'recommendation', 'awaiting_satgas', 'satgas_action', 'investigating', 'resolved']);

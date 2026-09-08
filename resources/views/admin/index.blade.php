@@ -97,9 +97,57 @@
             </form>
         </div>
 
-        <!-- Reports List Table -->
+        <!-- Reports List Container -->
         <div class="bg-white rounded-2xl border border-brandLight-200 shadow-sm overflow-hidden">
-            <div class="overflow-x-auto">
+            
+            <!-- Mobile View: Clean Card List (visible on mobile screens) -->
+            <div class="block md:hidden divide-y divide-brandLight-100">
+                @forelse($reports as $report)
+                    <div class="p-4 space-y-3">
+                        <div class="flex items-center justify-between gap-2">
+                            <span class="font-mono font-bold text-navy text-sm">{{ $report->tracking_code }}</span>
+                            <span class="badge-status {{ $report->status_badge_class }} text-[11px] px-2.5 py-0.5">
+                                {{ $report->status_label }}
+                            </span>
+                        </div>
+
+                        <div class="text-xs space-y-1">
+                            <div class="flex items-center justify-between text-brandGray">
+                                <span>{{ $report->created_at->translatedFormat('d M Y, H:i') }}</span>
+                                <span>
+                                    @if($report->is_anonymous)
+                                        <span class="font-semibold text-brandDark">Anonim</span>
+                                    @else
+                                        <span class="font-semibold text-brandDark">{{ $report->reporter_name }}</span>
+                                    @endif
+                                </span>
+                            </div>
+                            <p class="font-semibold text-brandDark pt-1">{{ $report->incident_type_label }} &bull; <span class="text-brandGray font-normal">{{ $report->incident_location ?: 'Lokasi tidak disebut' }}</span></p>
+                            <p class="text-brandGray line-clamp-2 text-[11px] leading-relaxed pt-0.5">{{ $report->chronology }}</p>
+                        </div>
+
+                        <div class="pt-2 flex items-center justify-between">
+                            @if($report->attachments->count() > 0)
+                                <span class="inline-flex items-center gap-1 text-[10px] text-navy bg-navy/10 px-2 py-0.5 rounded border border-navy/20 font-semibold">
+                                    📎 {{ $report->attachments->count() }} berkas
+                                </span>
+                            @else
+                                <span></span>
+                            @endif
+                            <a href="{{ route('admin.reports.show', $report) }}" class="btn-primary py-1.5 px-3 text-xs font-bold shadow-sm">
+                                Periksa Laporan &rarr;
+                            </a>
+                        </div>
+                    </div>
+                @empty
+                    <div class="p-8 text-center text-brandGray text-xs">
+                        Tidak ada laporan yang sesuai dengan kriteria filter.
+                    </div>
+                @endforelse
+            </div>
+
+            <!-- Desktop View: Table Layout (visible on md screens and up) -->
+            <div class="hidden md:block overflow-x-auto">
                 <table class="w-full text-left text-sm text-brandDark">
                     <thead class="bg-navy/5 border-b border-brandLight-200 text-xs font-bold text-navy uppercase tracking-wider">
                         <tr>
