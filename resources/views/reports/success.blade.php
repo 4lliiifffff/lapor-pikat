@@ -15,10 +15,6 @@
                 </svg>
             </div>
 
-            <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-navy/10 border border-navy/20 text-navy text-xs font-bold uppercase tracking-wider mb-3">
-                Laporan Berhasil Dikirim
-            </span>
-
             <h1 class="text-2xl sm:text-3xl font-extrabold text-navy tracking-tight">
                 Terima kasih sudah berani bersuara
             </h1>

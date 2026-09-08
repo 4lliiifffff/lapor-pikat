@@ -12,10 +12,6 @@
         
         <!-- Header Section -->
         <div class="text-center mb-8">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy/10 border border-navy/20 text-navy text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
-                <svg class="w-4 h-4 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-                Layanan Pelaporan Rahasia & Aman
-            </div>
             <h1 class="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight">
                 Ceritakan apa yang terjadi
             </h1>
@@ -27,7 +23,8 @@
         <!-- Visual Workflow Banner (5 Tahap Penanganan) -->
         <div class="mb-8 p-5 rounded-2xl bg-white border border-brandLight-200 shadow-sm">
             <h3 class="text-xs font-bold uppercase tracking-wider text-navy mb-3 text-center sm:text-left flex items-center justify-center sm:justify-start gap-2">
-                <svg class="w-4 h-4 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+
+            <svg class="w-4 h-4 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                 <span>Alur Penanganan Laporan Pengaduan</span>
             </h3>
             <div class="grid grid-cols-1 sm:grid-cols-5 gap-2 text-xs">

@@ -9,10 +9,7 @@
         <!-- Header & Title -->
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
             <div>
-                <span class="text-xs font-bold uppercase tracking-wider text-navy bg-navy/10 px-2.5 py-1 rounded-md border border-navy/20">
-                    Panel Penanganan Kasus
-                </span>
-                <h1 class="text-2xl sm:text-3xl font-extrabold text-navy mt-2 tracking-tight">
+                <h1 class="text-2xl sm:text-3xl font-extrabold text-navy tracking-tight">
                     Daftar Pengaduan Perundungan
                 </h1>
                 <p class="text-brandGray text-sm mt-1">
