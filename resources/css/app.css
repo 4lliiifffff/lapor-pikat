@@ -14,7 +14,7 @@
 
     /* Buttons */
     .btn-primary {
-        @apply inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-navy to-navy-700 hover:from-navy-600 hover:to-navy-800 active:scale-[0.98] shadow-md shadow-navy/20 hover:shadow-lg hover:shadow-navy/30 transition-all cursor-pointer disabled:opacity-50 disabled:pointer-events-none;
+        @apply inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-bold text-sm text-white bg-navy hover:bg-[#08284e] active:scale-[0.98] shadow-md shadow-navy/20 hover:shadow-lg transition-all cursor-pointer disabled:opacity-50 disabled:pointer-events-none;
     }
 
     .btn-secondary {

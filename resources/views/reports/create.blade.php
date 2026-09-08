@@ -4,9 +4,7 @@
 
 @section('content')
 <div class="relative overflow-hidden pt-6 pb-16 lg:py-14">
-    <!-- Subtle Background Glows -->
-    <div class="absolute -top-32 -left-32 w-96 h-96 bg-navy/10 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute top-1/2 -right-32 w-96 h-96 bg-brandOrange/10 rounded-full blur-3xl pointer-events-none"></div>
+
 
     <div class="max-w-3xl mx-auto px-4 sm:px-6 relative z-10">
         

@@ -269,9 +269,7 @@
 
     <!-- Call to Action: Kamu Tidak Sendirian -->
     <section class="max-w-4xl mx-auto px-4 sm:px-6">
-        <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-[#2E2E2E] via-[#232323] to-[#0A315F] text-white text-center shadow-2xl relative overflow-hidden">
-            <div class="absolute -right-10 -top-10 w-48 h-48 bg-navy/30 rounded-full blur-3xl"></div>
-            <div class="absolute -left-10 -bottom-10 w-48 h-48 bg-brandRed/20 rounded-full blur-3xl"></div>
+        <div class="p-8 sm:p-12 rounded-3xl bg-[#2E2E2E] text-white text-center shadow-2xl relative overflow-hidden">
 
             <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
                 Kamu Tidak Sendirian

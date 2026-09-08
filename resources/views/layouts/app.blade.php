@@ -26,10 +26,7 @@
         class="fixed inset-0 z-[99999] flex items-center justify-center bg-[#0A315F]/95 backdrop-blur-md transition-all duration-400 ease-out pointer-events-auto">
         <div id="preloader-card"
             class="relative flex flex-col items-center justify-center p-8 sm:p-10 rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl shadow-2xl shadow-navy/80 transition-all duration-400 ease-out scale-100">
-            <!-- Glow background -->
-            <div
-                class="absolute -inset-1 bg-gradient-to-r from-[#FBA239]/20 to-[#E63038]/20 rounded-3xl blur-xl opacity-60 -z-10">
-            </div>
+
 
             <div class="loader">
                 <div class="circle">

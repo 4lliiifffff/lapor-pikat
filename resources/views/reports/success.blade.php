@@ -25,7 +25,6 @@
 
             <!-- Tracking Code Box -->
             <div class="mt-8 p-6 rounded-2xl bg-[#2E2E2E] text-white shadow-lg relative overflow-hidden">
-                <div class="absolute -right-8 -bottom-8 w-32 h-32 bg-navy/20 rounded-full blur-2xl"></div>
                 
                 <p class="text-xs uppercase tracking-widest text-[#FBA239] font-bold mb-2">Kode Pelacakan Laporan Kamu</p>
                 
