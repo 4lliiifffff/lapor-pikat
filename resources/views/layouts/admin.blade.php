@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'Panel Petugas - Lapor Aman PKBM Pintar Berbakat')</title>
+    <title>@yield('title', 'Panel Petugas - ' . setting('app_name', 'LaporAman') . ' ' . setting('institution_name', 'PKBM Pintar Berbakat'))</title>
     
+    @if(setting('app_favicon') && \Illuminate\Support\Facades\Storage::disk('public')->exists(setting('app_favicon')))
+        <link rel="icon" type="image/x-icon" href="{{ asset('storage/' . setting('app_favicon')) }}">
+    @endif
+
     <!-- Google Fonts: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -89,17 +93,21 @@
                 <!-- Brand Logo & Title -->
                 <div class="flex items-center gap-6">
                     <a href="{{ route('admin.reports.index') }}" class="flex items-center gap-3 group">
-                        <div class="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-white shadow-inner group-hover:scale-105 transition-transform">
-                            <svg class="w-6 h-6 text-[#FBA239]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                            </svg>
-                        </div>
+                        @if(setting('app_logo') && \Illuminate\Support\Facades\Storage::disk('public')->exists(setting('app_logo')))
+                            <img src="{{ asset('storage/' . setting('app_logo')) }}" alt="Logo {{ setting('app_name', 'LaporAman') }}" class="h-10 object-contain group-hover:scale-105 transition-transform">
+                        @else
+                            <div class="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-white shadow-inner group-hover:scale-105 transition-transform">
+                                <svg class="w-6 h-6 text-[#FBA239]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                </svg>
+                            </div>
+                        @endif
                         <div>
                             <div class="flex items-center gap-2">
-                                <span class="font-extrabold text-lg sm:text-xl tracking-tight text-white">Lapor<span class="text-[#FBA239]">Aman</span></span>
+                                <span class="font-extrabold text-lg sm:text-xl tracking-tight text-white">{{ setting('app_name', 'LaporAman') }}</span>
                                 <span class="bg-[#E63038] text-white text-[10px] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider">Internal Portal</span>
                             </div>
-                            <p class="text-[11px] text-[#EDEDED]/70 hidden sm:block">Panel Penanganan Kasus & Pengelolaan Sistem</p>
+                            <p class="text-[11px] text-[#EDEDED]/70 hidden sm:block">Panel {{ setting('institution_name', 'PKBM Pintar Berbakat') }}</p>
                         </div>
                     </a>
 
@@ -114,6 +122,10 @@
                             <a href="{{ route('admin.users.index') }}" class="px-4 py-2 rounded-xl text-sm font-semibold transition-colors flex items-center gap-2 {{ request()->routeIs('admin.users.*') ? 'bg-white/15 text-white font-bold border border-white/20' : 'text-[#EDEDED]/80 hover:text-white hover:bg-white/10' }}">
                                 <svg class="w-4 h-4 text-[#FBA239]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
                                 <span>Kelola Akun & Monitoring</span>
+                            </a>
+                            <a href="{{ route('admin.settings.index') }}" class="px-4 py-2 rounded-xl text-sm font-semibold transition-colors flex items-center gap-2 {{ request()->routeIs('admin.settings.*') ? 'bg-white/15 text-white font-bold border border-white/20' : 'text-[#EDEDED]/80 hover:text-white hover:bg-white/10' }}">
+                                <svg class="w-4 h-4 text-[#FBA239]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                <span>Pengaturan CMS & Branding</span>
                             </a>
                         @endrole
                     </nav>
@@ -149,6 +161,9 @@
                     <a href="{{ route('admin.users.index') }}" class="px-3 py-1.5 rounded-lg whitespace-nowrap {{ request()->routeIs('admin.users.*') ? 'bg-white/20 text-white font-bold' : 'text-[#EDEDED]/70' }}">
                         Kelola Akun & Monitoring
                     </a>
+                    <a href="{{ route('admin.settings.index') }}" class="px-3 py-1.5 rounded-lg whitespace-nowrap {{ request()->routeIs('admin.settings.*') ? 'bg-white/20 text-white font-bold' : 'text-[#EDEDED]/70' }}">
+                        Pengaturan CMS & Branding
+                    </a>
                 @endrole
             </div>
         </div>
@@ -182,12 +197,12 @@
     <footer class="bg-[#2E2E2E] text-slate-400 border-t border-slate-800 py-6">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
             <div class="flex items-center gap-2">
-                <span class="font-bold text-white">LaporAman Admin</span>
+                <span class="font-bold text-white">{{ setting('app_name', 'LaporAman') }} Admin</span>
                 <span>&bull;</span>
-                <span>Portal Resmi Pengelolaan Kasus PKBM Pintar Berbakat</span>
+                <span>Portal Resmi Pengelolaan Kasus {{ setting('institution_name', 'PKBM Pintar Berbakat') }}</span>
             </div>
             <div>
-                &copy; {{ date('Y') }} PKBM Pintar Berbakat. Hak Cipta Dilindungi.
+                {{ setting('footer_copyright', '© 2026 PKBM Pintar Berbakat. Hak Cipta Dilindungi.') }}
             </div>
         </div>
     </footer>

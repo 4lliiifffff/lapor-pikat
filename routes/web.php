@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminReportController;
+use App\Http\Controllers\Admin\AdminSettingController;
 use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\EducationController;
 use App\Http\Controllers\ProfileController;
@@ -30,12 +31,17 @@ Route::middleware(['auth', 'role:super_admin|admin'])->prefix('admin')->name('ad
 
     // Super Admin Account Management & Monitoring Routes (Accessible ONLY by super_admin)
     Route::middleware(['role:super_admin'])->group(function () {
+        // Super Admin Account Management & Monitoring Routes (Accessible ONLY by super_admin)
         Route::get('/users', [AdminUserController::class, 'index'])->name('users.index');
         Route::get('/users/create', [AdminUserController::class, 'create'])->name('users.create');
         Route::post('/users', [AdminUserController::class, 'store'])->name('users.store');
         Route::get('/users/{user}/edit', [AdminUserController::class, 'edit'])->name('users.edit');
         Route::put('/users/{user}', [AdminUserController::class, 'update'])->name('users.update');
         Route::delete('/users/{user}', [AdminUserController::class, 'destroy'])->name('users.destroy');
+
+        // CMS & Branding Settings Routes (Accessible ONLY by super_admin)
+        Route::get('/settings', [AdminSettingController::class, 'index'])->name('settings.index');
+        Route::post('/settings', [AdminSettingController::class, 'update'])->name('settings.update');
     });
 });
 

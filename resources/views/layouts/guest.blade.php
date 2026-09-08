@@ -5,7 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ $title ?? 'Masuk Panel Petugas - Lapor Aman PKBM Pintar Berbakat' }}</title>
+        <title>{{ $title ?? 'Masuk Panel Petugas - ' . setting('app_name', 'LaporAman') . ' ' . setting('institution_name', 'PKBM Pintar Berbakat') }}</title>
+
+        @if(setting('app_favicon') && \Illuminate\Support\Facades\Storage::disk('public')->exists(setting('app_favicon')))
+            <link rel="icon" type="image/x-icon" href="{{ asset('storage/' . setting('app_favicon')) }}">
+        @endif
 
         <!-- Google Fonts: Plus Jakarta Sans -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -100,17 +104,21 @@
 
         <div class="sm:mx-auto sm:w-full sm:max-w-md text-center">
             <a href="{{ route('reports.create') }}" class="inline-flex items-center gap-3 group mb-4">
-                <div class="w-12 h-12 rounded-2xl bg-navy flex items-center justify-center text-white shadow-lg shadow-navy/25 group-hover:scale-105 transition-transform">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                </div>
+                @if(setting('app_logo') && \Illuminate\Support\Facades\Storage::disk('public')->exists(setting('app_logo')))
+                    <img src="{{ asset('storage/' . setting('app_logo')) }}" alt="Logo {{ setting('app_name', 'LaporAman') }}" class="h-14 object-contain group-hover:scale-105 transition-transform">
+                @else
+                    <div class="w-12 h-12 rounded-2xl bg-navy flex items-center justify-center text-white shadow-lg shadow-navy/25 group-hover:scale-105 transition-transform">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                @endif
             </a>
             <h2 class="text-2xl font-extrabold text-navy tracking-tight">
-                Lapor<span class="text-[#E63038]">Aman</span>
+                {{ setting('app_name', 'LaporAman') }}
             </h2>
             <p class="text-xs text-brandGray mt-1 font-semibold uppercase tracking-wider">
-                Portal Masuk Petugas & Tutor PKBM Pintar Berbakat
+                Portal Masuk Petugas & Tutor {{ setting('institution_name', 'PKBM Pintar Berbakat') }}
             </p>
         </div>
 
@@ -120,7 +128,7 @@
             </div>
             
             <p class="text-center text-xs text-brandGray mt-6">
-                &copy; {{ date('Y') }} PKBM Pintar Berbakat. Sistem Pengaduan Aman & Terenkripsi.
+                {{ setting('footer_copyright', '© 2026 PKBM Pintar Berbakat. Hak Cipta Dilindungi.') }}
             </p>
         </div>
     </body>
