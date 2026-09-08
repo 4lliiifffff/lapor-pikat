@@ -7,7 +7,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Header & Title -->
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 animate-fade-in-up stagger-1">
             <div>
                 <h1 class="text-2xl sm:text-3xl font-extrabold text-navy tracking-tight">
                     Daftar Pengaduan Perundungan
@@ -25,39 +25,39 @@
         </div>
 
         <!-- Statistics Stats Cards -->
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-8">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-8 animate-fade-in-up stagger-2">
             <!-- Total -->
-            <a href="{{ route('admin.reports.index') }}" class="p-3.5 rounded-xl bg-white border border-brandLight-200 shadow-sm hover:border-navy/40 transition-colors">
+            <a href="{{ route('admin.reports.index') }}" class="p-3.5 rounded-xl bg-white border border-brandLight-200 shadow-sm hover:border-navy/40 hover:-translate-y-1 hover:shadow-md transition-all duration-200">
                 <span class="text-[11px] text-brandGray font-medium block">Total Laporan</span>
                 <span class="text-xl font-black text-navy mt-1 block">{{ $stats['total'] }}</span>
             </a>
 
             <!-- Pending (Validasi) -->
-            <a href="{{ route('admin.reports.index', ['status' => 'pending']) }}" class="p-3.5 rounded-xl bg-brandOrange/10 border border-brandOrange/30 shadow-sm hover:border-brandOrange transition-colors">
+            <a href="{{ route('admin.reports.index', ['status' => 'pending']) }}" class="p-3.5 rounded-xl bg-brandOrange/10 border border-brandOrange/30 shadow-sm hover:border-brandOrange hover:-translate-y-1 hover:shadow-md transition-all duration-200">
                 <span class="text-[11px] text-brandOrange-700 font-bold block">1. Validasi Internal</span>
                 <span class="text-xl font-black text-brandOrange-700 mt-1 block">{{ $stats['pending'] }}</span>
             </a>
 
             <!-- Reviewing (Investigasi) -->
-            <a href="{{ route('admin.reports.index', ['status' => 'reviewing']) }}" class="p-3.5 rounded-xl bg-navy/5 border border-navy/20 shadow-sm hover:border-navy/40 transition-colors">
+            <a href="{{ route('admin.reports.index', ['status' => 'reviewing']) }}" class="p-3.5 rounded-xl bg-navy/5 border border-navy/20 shadow-sm hover:border-navy/40 hover:-translate-y-1 hover:shadow-md transition-all duration-200">
                 <span class="text-[11px] text-navy font-bold block">2. Investigasi Internal</span>
                 <span class="text-xl font-black text-navy mt-1 block">{{ $stats['reviewing'] }}</span>
             </a>
 
             <!-- Awaiting Satgas / Recommendation -->
-            <a href="{{ route('admin.reports.index', ['status' => 'awaiting_satgas']) }}" class="p-3.5 rounded-xl bg-navy/10 border border-navy/25 shadow-sm hover:border-navy/40 transition-colors">
+            <a href="{{ route('admin.reports.index', ['status' => 'awaiting_satgas']) }}" class="p-3.5 rounded-xl bg-navy/10 border border-navy/25 shadow-sm hover:border-navy/40 hover:-translate-y-1 hover:shadow-md transition-all duration-200">
                 <span class="text-[11px] text-navy font-bold block">3-4. Menunggu Satgas</span>
                 <span class="text-xl font-black text-navy mt-1 block">{{ $stats['awaiting_satgas'] + $stats['recommendation'] }}</span>
             </a>
 
             <!-- Satgas Action -->
-            <a href="{{ route('admin.reports.index', ['status' => 'satgas_action']) }}" class="p-3.5 rounded-xl bg-navy/15 border border-navy/30 shadow-sm hover:border-navy/50 transition-colors">
+            <a href="{{ route('admin.reports.index', ['status' => 'satgas_action']) }}" class="p-3.5 rounded-xl bg-navy/15 border border-navy/30 shadow-sm hover:border-navy/50 hover:-translate-y-1 hover:shadow-md transition-all duration-200">
                 <span class="text-[11px] text-navy font-bold block">5. Aksi Satgas</span>
                 <span class="text-xl font-black text-navy mt-1 block">{{ $stats['satgas_action'] }}</span>
             </a>
 
             <!-- Resolved -->
-            <a href="{{ route('admin.reports.index', ['status' => 'resolved']) }}" class="p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 shadow-sm hover:border-emerald-400 transition-colors">
+            <a href="{{ route('admin.reports.index', ['status' => 'resolved']) }}" class="p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 shadow-sm hover:border-emerald-400 hover:-translate-y-1 hover:shadow-md transition-all duration-200">
                 <span class="text-[11px] text-emerald-800 font-bold block">Selesai</span>
                 <span class="text-xl font-black text-emerald-700 mt-1 block">{{ $stats['resolved'] }}</span>
             </a>

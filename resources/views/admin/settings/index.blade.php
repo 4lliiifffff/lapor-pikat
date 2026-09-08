@@ -6,7 +6,7 @@
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <!-- Header Page -->
-    <div class="mb-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+    <div class="mb-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4 animate-fade-in-up stagger-1">
         <div>
             <div class="flex items-center gap-2">
                 <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-[#FBA239]/15 text-[#FBA239] border border-[#FBA239]/30 uppercase tracking-wider">Fitur Eksklusif Super Admin</span>
@@ -29,7 +29,7 @@
     <form action="{{ route('admin.settings.update') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 animate-fade-in-up stagger-2">
             
             <!-- Left & Center Column: Main Content (Branding & Contact) -->
             <div class="lg:col-span-2 space-y-8">

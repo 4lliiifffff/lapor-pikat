@@ -19,7 +19,7 @@
             </span>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 animate-fade-in-up stagger-1">
             
             <!-- Left 2 Cols: Report Details & Timeline -->
             <div class="lg:col-span-2 space-y-6">

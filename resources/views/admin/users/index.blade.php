@@ -6,7 +6,7 @@
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <!-- Page Header & Action -->
-    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 animate-fade-in-up stagger-1">
         <div>
             <h1 class="text-2xl font-extrabold text-navy tracking-tight">Kelola Akun & Monitoring Sistem</h1>
             <p class="text-sm text-brandGray mt-1">Pemantauan akun petugas internal dan hak akses sistem LaporAman PKBM Pintar Berbakat.</p>
@@ -24,7 +24,7 @@
     </div>
 
     <!-- System Monitoring Metrics -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8 animate-fade-in-up stagger-2">
         <!-- Metric 1: Total Users -->
         <div class="card-glass p-5 flex items-center gap-4">
             <div class="w-12 h-12 rounded-xl bg-navy/10 border border-navy/20 flex items-center justify-center text-navy shrink-0">

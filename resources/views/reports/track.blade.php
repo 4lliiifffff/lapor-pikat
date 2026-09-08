@@ -7,9 +7,9 @@
     <div class="max-w-3xl mx-auto px-4 sm:px-6">
         
         <!-- Search Card -->
-        <div class="card-glass p-6 sm:p-10 mb-10 shadow-lg border border-brandLight-200">
+        <div class="card-glass p-6 sm:p-10 mb-10 shadow-lg border border-brandLight-200 animate-fade-in-up stagger-1">
             <div class="text-center max-w-xl mx-auto mb-6">
-                <div class="w-12 h-12 mx-auto rounded-xl bg-navy/10 text-navy flex items-center justify-center mb-3">
+                <div class="w-12 h-12 mx-auto rounded-xl bg-navy/10 text-navy flex items-center justify-center mb-3 hover:scale-110 transition-transform duration-200">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
                 </div>
                 <h1 class="text-2xl sm:text-3xl font-extrabold text-navy tracking-tight">
@@ -44,7 +44,7 @@
 
         <!-- Tracking Result Details (If $report exists) -->
         @if(isset($report))
-            <div class="card-glass p-6 sm:p-8 shadow-xl border border-brandLight-200 space-y-8 animate-in fade-in duration-300">
+            <div class="card-glass p-6 sm:p-8 shadow-xl border border-brandLight-200 space-y-8 animate-fade-in-up stagger-2">
                 
                 <!-- Header Status -->
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-brandLight-200">

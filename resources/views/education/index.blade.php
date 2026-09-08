@@ -6,7 +6,7 @@
 <div class="py-10 lg:py-16 space-y-16">
     
     <!-- Hero Section -->
-    <section class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 text-center animate-fade-in-up stagger-1">
         <h1 class="text-3xl sm:text-5xl font-extrabold text-navy tracking-tight leading-tight">
             Kenali, Cegah, dan Hadapi Perundungan
         </h1>
@@ -16,7 +16,7 @@
     </section>
 
     <!-- Jenis-jenis Perundungan -->
-    <section class="max-w-6xl mx-auto px-4 sm:px-6">
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 animate-fade-in-up stagger-2">
         <div class="text-center mb-10">
             <h2 class="text-2xl sm:text-3xl font-extrabold text-navy">Jenis-jenis Perundungan</h2>
             <p class="text-brandGray text-sm mt-1">Pahami 4 bentuk perundungan yang sering terjadi di lingkungan sekitar</p>
@@ -24,7 +24,7 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Fisik -->
-            <div class="card-glass p-6 border border-brandLight-200 hover:border-navy transition-all duration-300 hover:shadow-lg group">
+            <div class="card-glass p-6 border border-brandLight-200 hover:border-navy transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl group">
                 <div class="w-12 h-12 rounded-xl bg-brandRed/10 text-brandRed flex items-center justify-center font-bold mb-4 group-hover:scale-110 transition-transform">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
                 </div>
@@ -35,7 +35,7 @@
             </div>
 
             <!-- Verbal -->
-            <div class="card-glass p-6 border border-brandLight-200 hover:border-navy transition-all duration-300 hover:shadow-lg group">
+            <div class="card-glass p-6 border border-brandLight-200 hover:border-navy transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl group">
                 <div class="w-12 h-12 rounded-xl bg-brandOrange/10 text-brandOrange-700 flex items-center justify-center font-bold mb-4 group-hover:scale-110 transition-transform">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
                 </div>
@@ -46,7 +46,7 @@
             </div>
 
             <!-- Sosial -->
-            <div class="card-glass p-6 border border-brandLight-200 hover:border-navy transition-all duration-300 hover:shadow-lg group">
+            <div class="card-glass p-6 border border-brandLight-200 hover:border-navy transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl group">
                 <div class="w-12 h-12 rounded-xl bg-navy/10 text-navy flex items-center justify-center font-bold mb-4 group-hover:scale-110 transition-transform">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
                 </div>
@@ -57,7 +57,7 @@
             </div>
 
             <!-- Online (Cyberbullying) -->
-            <div class="card-glass p-6 border border-brandLight-200 hover:border-navy transition-all duration-300 hover:shadow-lg group">
+            <div class="card-glass p-6 border border-brandLight-200 hover:border-navy transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl group">
                 <div class="w-12 h-12 rounded-xl bg-navy/10 text-navy flex items-center justify-center font-bold mb-4 group-hover:scale-110 transition-transform">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                 </div>
@@ -70,7 +70,7 @@
     </section>
 
     <!-- Tanda-tanda Mengalami Perundungan -->
-    <section class="max-w-5xl mx-auto px-4 sm:px-6">
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 reveal-on-scroll">
         <div class="card-glass p-8 sm:p-10 border border-brandLight-200">
             <div class="max-w-2xl mb-8">
                 <span class="text-xs font-bold uppercase tracking-wider text-navy">Deteksi Dini</span>

@@ -9,7 +9,7 @@
     <div class="max-w-3xl mx-auto px-4 sm:px-6 relative z-10">
         
         <!-- Header Section -->
-        <div class="text-center mb-8">
+        <div class="text-center mb-8 animate-fade-in-up stagger-1">
             <h1 class="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight">
                 Ceritakan apa yang terjadi
             </h1>
@@ -19,7 +19,7 @@
         </div>
 
         <!-- Visual Workflow Banner (5 Tahap Penanganan) -->
-        <div class="mb-8 p-5 rounded-2xl bg-white border border-brandLight-200 shadow-sm">
+        <div class="mb-8 p-5 rounded-2xl bg-white border border-brandLight-200 shadow-sm animate-fade-in-up stagger-2 hover:shadow-md transition-shadow duration-300">
             <h3 class="text-xs font-bold uppercase tracking-wider text-navy mb-3 text-center sm:text-left flex items-center justify-center sm:justify-start gap-2">
 
             <svg class="w-4 h-4 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
@@ -27,7 +27,7 @@
             </h3>
             <div class="grid grid-cols-1 min-[480px]:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 text-xs">
                 <!-- Step 1 -->
-                <div class="p-2.5 rounded-xl bg-brandOrange/10 border border-brandOrange/30">
+                <div class="p-2.5 rounded-xl bg-brandOrange/10 border border-brandOrange/30 hover:-translate-y-0.5 transition-transform duration-200">
                     <span class="font-bold text-brandOrange-700 block mb-1 flex items-center gap-1">
                         <span class="w-4 h-4 rounded-full bg-[#FBA239] text-white text-[9px] flex items-center justify-center font-black">1</span>
                         Validasi
@@ -35,7 +35,7 @@
                     <p class="text-brandDark leading-relaxed text-[10px]">Petugas internal validasi kelayakan. Jika tidak valid &rarr; Ditolak.</p>
                 </div>
                 <!-- Step 2 -->
-                <div class="p-2.5 rounded-xl bg-navy/5 border border-navy/20">
+                <div class="p-2.5 rounded-xl bg-navy/5 border border-navy/20 hover:-translate-y-0.5 transition-transform duration-200">
                     <span class="font-bold text-navy block mb-1 flex items-center gap-1">
                         <span class="w-4 h-4 rounded-full bg-navy text-white text-[9px] flex items-center justify-center font-black">2</span>
                         Investigasi
@@ -43,7 +43,7 @@
                     <p class="text-brandDark leading-relaxed text-[10px]">Investigasi internal. Selesai langsung ATAU buat rekomendasi.</p>
                 </div>
                 <!-- Step 3 -->
-                <div class="p-2.5 rounded-xl bg-navy/10 border border-navy/25">
+                <div class="p-2.5 rounded-xl bg-navy/10 border border-navy/25 hover:-translate-y-0.5 transition-transform duration-200">
                     <span class="font-bold text-navy block mb-1 flex items-center gap-1">
                         <span class="w-4 h-4 rounded-full bg-navy text-white text-[9px] flex items-center justify-center font-black">3</span>
                         Rekomendasi
@@ -51,7 +51,7 @@
                     <p class="text-brandDark leading-relaxed text-[10px]">Pihak internal menyerahkan rekomendasi ke Satgas.</p>
                 </div>
                 <!-- Step 4 -->
-                <div class="p-2.5 rounded-xl bg-navy/15 border border-navy/30">
+                <div class="p-2.5 rounded-xl bg-navy/15 border border-navy/30 hover:-translate-y-0.5 transition-transform duration-200">
                     <span class="font-bold text-navy block mb-1 flex items-center gap-1">
                         <span class="w-4 h-4 rounded-full bg-navy text-white text-[9px] flex items-center justify-center font-black">4</span>
                         Aksi Satgas
@@ -59,7 +59,7 @@
                     <p class="text-brandDark leading-relaxed text-[10px]">Satgas memulihkan korban & memberi sanksi ke pelaku.</p>
                 </div>
                 <!-- Step 5 -->
-                <div class="p-2.5 rounded-xl bg-emerald-50 border border-emerald-200">
+                <div class="p-2.5 rounded-xl bg-emerald-50 border border-emerald-200 hover:-translate-y-0.5 transition-transform duration-200">
                     <span class="font-bold text-emerald-800 block mb-1 flex items-center gap-1">
                         <span class="w-4 h-4 rounded-full bg-emerald-600 text-white text-[9px] flex items-center justify-center font-black">5</span>
                         Selesai
@@ -70,7 +70,7 @@
         </div>
 
         <!-- Form Card Container -->
-        <div class="card-glass p-6 sm:p-10 shadow-xl border border-brandLight-200">
+        <div class="card-glass p-6 sm:p-10 shadow-xl border border-brandLight-200 animate-fade-in-up stagger-3">
             
             <form action="{{ route('reports.store') }}" method="POST" enctype="multipart/form-data" id="report-form" class="space-y-8">
                 @csrf

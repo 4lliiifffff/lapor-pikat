@@ -6,10 +6,10 @@
 <div class="py-12 lg:py-20">
     <div class="max-w-2xl mx-auto px-4 sm:px-6">
         
-        <div class="card-glass p-8 sm:p-12 text-center shadow-xl border border-brandLight-200">
+        <div class="card-glass p-8 sm:p-12 text-center shadow-xl border border-brandLight-200 animate-scale-up">
             
             <!-- Success Icon -->
-            <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto rounded-2xl bg-navy text-white flex items-center justify-center mb-6 shadow-md ring-8 ring-navy/10">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto rounded-2xl bg-navy text-white flex items-center justify-center mb-6 shadow-md ring-8 ring-navy/10 hover:scale-105 transition-transform duration-300">
                 <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
                 </svg>
