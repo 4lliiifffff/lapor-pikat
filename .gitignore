@@ -1,6 +1,7 @@
-/.agents
-/.claude
-/docs
+/.agents/skills
+/.claude/skills
+/.kiro/skills
+/docs/
 *.log
 .DS_Store
 .env

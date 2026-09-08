@@ -22,13 +22,24 @@ class RoleAndPermissionSeeder extends Seeder
         // Create Permissions
         $viewReports = Permission::firstOrCreate(['name' => 'view-reports']);
         $manageReports = Permission::firstOrCreate(['name' => 'manage-reports']);
+        $manageUsers = Permission::firstOrCreate(['name' => 'manage-users']);
 
         // Create Roles and assign permissions
+        $superAdminRole = Role::firstOrCreate(['name' => 'super_admin']);
+        $superAdminRole->syncPermissions([$viewReports, $manageReports, $manageUsers]);
+
         $adminRole = Role::firstOrCreate(['name' => 'admin']);
         $adminRole->syncPermissions([$viewReports, $manageReports]);
 
-        $officerRole = Role::firstOrCreate(['name' => 'officer']);
-        $officerRole->syncPermissions([$viewReports, $manageReports]);
+        // Create or update Super Admin User
+        $superAdminUser = User::firstOrCreate(
+            ['email' => 'superadmin@pkbm.id'],
+            [
+                'name' => 'Super Admin PKBM',
+                'password' => Hash::make('password'),
+            ]
+        );
+        $superAdminUser->syncRoles([$superAdminRole]);
 
         // Create or update Admin User
         $adminUser = User::firstOrCreate(
@@ -48,6 +59,6 @@ class RoleAndPermissionSeeder extends Seeder
                 'password' => Hash::make('password'),
             ]
         );
-        $tutorUser->syncRoles([$officerRole]);
+        $tutorUser->syncRoles([$adminRole]);
     }
 }

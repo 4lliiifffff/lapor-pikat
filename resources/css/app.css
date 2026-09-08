@@ -44,4 +44,124 @@
     }
 }
 
+/* Page Preloader Loader */
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --color: #FBA239;
+    --animation: 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.loader .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 22px;
+    height: 22px;
+    border: solid 2px var(--color);
+    border-radius: 50%;
+    margin: 0 8px;
+    background-color: transparent;
+    animation: circle-keys var(--animation);
+}
+
+.loader .circle .dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--color);
+    box-shadow: 0 0 10px rgba(251, 162, 57, 0.4);
+    animation: dot-keys var(--animation);
+}
+
+.loader .circle .outline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    animation: outline-keys var(--animation);
+}
+
+.circle:nth-child(1),
+.circle:nth-child(1) .dot {
+    animation-delay: 0s;
+}
+
+.circle:nth-child(2),
+.circle:nth-child(2) .dot {
+    animation-delay: 0.18s;
+}
+
+.circle:nth-child(3),
+.circle:nth-child(3) .dot {
+    animation-delay: 0.36s;
+}
+
+.circle:nth-child(4),
+.circle:nth-child(4) .dot {
+    animation-delay: 0.54s;
+}
+
+.circle:nth-child(1) .outline {
+    animation-delay: 0.4s;
+}
+
+.circle:nth-child(2) .outline {
+    animation-delay: 0.58s;
+}
+
+.circle:nth-child(3) .outline {
+    animation-delay: 0.76s;
+}
+
+.circle:nth-child(4) .outline {
+    animation-delay: 0.94s;
+}
+
+@keyframes circle-keys {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+    50% {
+        transform: scale(1.35);
+        opacity: 0.4;
+    }
+}
+
+@keyframes dot-keys {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(0.2);
+    }
+}
+
+@keyframes outline-keys {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        outline: solid 14px var(--color);
+        outline-offset: 0;
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        outline: solid 0px transparent;
+        outline-offset: 14px;
+        opacity: 0;
+    }
+}
+
+
+
 
