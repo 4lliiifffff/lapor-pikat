@@ -289,7 +289,7 @@
             </div>
 
             <div class="mt-8 pt-6 border-t border-white/15 text-xs text-slate-300">
-                Dalam bahaya sekarang? Hubungi <a href="https://wa.me/6282219082518" target="_blank" rel="noopener noreferrer" class="text-[#FBA239] hover:text-amber-200 font-bold underline underline-offset-4">Tim PKBM Pintar Berbakat</a> langsung.
+                Dalam bahaya sekarang? Hubungi <a href="https://wa.me/6282219082518" target="_blank" rel="noopener noreferrer" class="text-brandOrange-400 hover:text-amber-200 font-bold underline underline-offset-4">Tim PKBM Pintar Berbakat</a> langsung.
             </div>
         </div>
     </section>

@@ -14,7 +14,7 @@
 
     /* Buttons */
     .btn-primary {
-        @apply inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-bold text-sm text-white bg-navy hover:bg-[#08284e] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] shadow-md shadow-navy/20 hover:shadow-lg hover:shadow-navy/30 transition-all duration-200 ease-out cursor-pointer disabled:opacity-50 disabled:pointer-events-none;
+        @apply inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-bold text-sm text-white bg-navy-700 hover:bg-navy-800 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] shadow-md shadow-navy/20 hover:shadow-lg hover:shadow-navy/30 transition-all duration-200 ease-out cursor-pointer disabled:opacity-50 disabled:pointer-events-none;
     }
 
     .btn-secondary {
@@ -36,7 +36,7 @@
 
     /* Form Controls */
     .form-label {
-        @apply block text-xs uppercase tracking-wider font-bold text-navy mb-1.5;
+        @apply block text-xs uppercase tracking-wider font-bold text-navy-800 mb-1.5;
     }
 
     .form-input-control {
@@ -106,7 +106,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    --color: #FBA239;
+    --color: #D97706;
     --animation: 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
@@ -133,7 +133,7 @@
     height: 14px;
     border-radius: 50%;
     background-color: var(--color);
-    box-shadow: 0 0 10px rgba(251, 162, 57, 0.4);
+    box-shadow: 0 0 10px rgba(217, 119, 6, 0.3);
     animation: dot-keys var(--animation);
 }
 

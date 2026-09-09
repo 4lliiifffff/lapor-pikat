@@ -20,16 +20,16 @@
             </h1>
 
             <p class="mt-3 text-brandDark text-sm sm:text-base leading-relaxed">
-                Laporanmu telah masuk ke sistem dengan status <span class="font-bold text-[#FBA239] bg-brandOrange/10 px-2 py-0.5 rounded border border-brandOrange/30">{{ $report->status_label }}</span>. Petugas internal akan terlebih dahulu melakukan validasi keabsahan laporan ini (jika tidak valid maka laporan ditolak, jika valid akan dilanjutkan ke tahap investigasi internal & penanganan Satgas).
+                Laporanmu telah masuk ke sistem dengan status <span class="font-bold text-brandOrange-600 bg-brandOrange/10 px-2 py-0.5 rounded border border-brandOrange/30">{{ $report->status_label }}</span>. Petugas internal akan terlebih dahulu melakukan validasi keabsahan laporan ini (jika tidak valid maka laporan ditolak, jika valid akan dilanjutkan ke tahap investigasi internal & penanganan Satgas).
             </p>
 
             <!-- Tracking Code Box -->
-            <div class="mt-8 p-6 rounded-2xl bg-[#2E2E2E] text-white shadow-lg relative overflow-hidden">
+            <div class="mt-8 p-6 rounded-2xl bg-brandDark-800 text-white shadow-lg relative overflow-hidden">
                 
-                <p class="text-xs uppercase tracking-widest text-[#FBA239] font-bold mb-2">Kode Pelacakan Laporan Kamu</p>
+                <p class="text-xs uppercase tracking-widest text-brandOrange-400 font-bold mb-2">Kode Pelacakan Laporan Kamu</p>
                 
                 <div class="flex items-center justify-center gap-3 my-3">
-                    <span id="tracking-code-val" class="font-mono text-2xl sm:text-3xl font-extrabold tracking-widest text-[#FBA239] select-all">
+                    <span id="tracking-code-val" class="font-mono text-2xl sm:text-3xl font-extrabold tracking-widest text-brandOrange-400 select-all">
                         {{ $report->tracking_code }}
                     </span>
                     <button type="button" onclick="copyTrackingCode()" class="p-2 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors title='Salin Kode'">

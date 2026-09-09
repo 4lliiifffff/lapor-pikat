@@ -27,7 +27,7 @@
     class="bg-brandLight-50 text-brandDark font-sans antialiased min-h-screen flex flex-col selection:bg-navy selection:text-white">
     <!-- Global Page Preloader -->
     <div id="page-preloader"
-        class="fixed inset-0 z-[99999] flex items-center justify-center bg-[#0A315F]/95 backdrop-blur-md transition-all duration-400 ease-out pointer-events-auto">
+        class="fixed inset-0 z-[99999] flex items-center justify-center bg-navy-900/95 backdrop-blur-md transition-all duration-400 ease-out pointer-events-auto">
         <div id="preloader-card"
             class="relative flex flex-col items-center justify-center p-8 sm:p-10 rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl shadow-2xl shadow-navy/80 transition-all duration-400 ease-out scale-100">
 
@@ -184,9 +184,9 @@
                         class="px-4 py-2 rounded-xl text-sm font-semibold transition-colors {{ request()->routeIs('education.*') ? 'text-navy bg-navy/10 font-bold border-b-2 border-navy' : 'text-brandDark hover:text-navy hover:bg-brandLight-100' }}">
                         Edukasi Bullying
                     </a>
-                    <div class="w-px h-6 bg-brandLight-200 mx-2"></div>
 
                     @auth
+                        <div class="w-px h-6 bg-brandLight-200 mx-2"></div>
                         <!-- Authenticated User Menu -->
                         <div class="flex items-center gap-2">
                             <a href="{{ route('admin.reports.index') }}"

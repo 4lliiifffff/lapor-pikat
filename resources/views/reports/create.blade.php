@@ -29,7 +29,7 @@
                 <!-- Step 1 -->
                 <div class="p-2.5 rounded-xl bg-brandOrange/10 border border-brandOrange/30 hover:-translate-y-0.5 transition-transform duration-200">
                     <span class="font-bold text-brandOrange-700 block mb-1 flex items-center gap-1">
-                        <span class="w-4 h-4 rounded-full bg-[#FBA239] text-white text-[9px] flex items-center justify-center font-black">1</span>
+                        <span class="w-4 h-4 rounded-full bg-brandOrange-500 text-white text-[9px] flex items-center justify-center font-black">1</span>
                         Validasi
                     </span>
                     <p class="text-brandDark leading-relaxed text-[10px]">Petugas internal validasi kelayakan. Jika tidak valid &rarr; Ditolak.</p>

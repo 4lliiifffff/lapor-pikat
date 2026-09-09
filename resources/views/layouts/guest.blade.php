@@ -21,7 +21,7 @@
     </head>
     <body class="font-sans text-brandDark antialiased bg-brandLight-50 min-h-screen flex flex-col justify-center py-12 sm:px-6 lg:px-8 relative overflow-hidden selection:bg-navy selection:text-white">
         <!-- Global Page Preloader -->
-        <div id="page-preloader" class="fixed inset-0 z-[99999] flex items-center justify-center bg-[#0A315F]/95 backdrop-blur-md transition-all duration-400 ease-out pointer-events-auto">
+        <div id="page-preloader" class="fixed inset-0 z-[99999] flex items-center justify-center bg-navy-900/95 backdrop-blur-md transition-all duration-400 ease-out pointer-events-auto">
             <div id="preloader-card" class="relative flex flex-col items-center justify-center p-8 sm:p-10 rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl shadow-2xl shadow-navy/80 transition-all duration-400 ease-out scale-100">
 
 
